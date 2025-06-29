@@ -1,0 +1,481 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="icon" href="assets/twds_circle.svg" type="image/svg+xml">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Logo Usage Guidelines - Taiwan Digital Streaming Co.</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100..900&display=swap');
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Noto Sans TC', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: #f8f9fa;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        .header {
+            background: linear-gradient(135deg, #419A1C 0%, #2d6a13 100%);
+            color: white;
+            padding: 30px 0;
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .header h1 {
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+        }
+
+        .header p {
+            font-size: 1.2rem;
+            opacity: 0.9;
+        }
+
+        .section {
+            background: white;
+            border-radius: 12px;
+            padding: 30px;
+            margin-bottom: 30px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .section h2 {
+            color: #419A1C;
+            font-size: 1.8rem;
+            margin-bottom: 20px;
+            border-bottom: 2px solid #419A1C;
+            padding-bottom: 10px;
+        }
+
+        .section h3 {
+            color: #419A1C;
+            font-size: 1.4rem;
+            margin: 25px 0 15px 0;
+        }
+
+        .logo-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin: 20px 0;
+        }
+
+        .logo-item {
+            background: #f8f9fa;
+            border-radius: 8px;
+            padding: 20px;
+            text-align: center;
+            border: 1px solid #e9ecef;
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+        }
+
+        .logo-item:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+        }
+
+        .logo-item.dark-bg {
+            background: #2c3e50;
+            color: white;
+        }
+
+        .logo-item.light-bg {
+            background: white;
+        }
+
+        .logo-item.gradient-bg {
+            background: linear-gradient(135deg, #419A1C 0%, #2d6a13 100%);
+            color: white;
+        }
+
+        .logo-item img {
+            max-width: 100%;
+            height: auto;
+            margin-bottom: 15px;
+        }
+
+        .logo-item h4 {
+            font-size: 1.1rem;
+            margin-bottom: 8px;
+            color: inherit;
+        }
+
+        .logo-item p {
+            font-size: 0.9rem;
+            opacity: 0.8;
+        }
+
+        .size-info {
+            background: #e8f5e8;
+            color: black;
+            border-left: 4px solid #419A1C;
+            padding: 15px;
+            margin: 15px 0;
+            border-radius: 0 8px 8px 0;
+        }
+
+        .missing-file {
+            background: #fff3cd;
+            border: 1px solid #ffeaa7;
+            border-radius: 8px;
+            padding: 15px;
+            margin: 10px 0;
+            color: #856404;
+        }
+
+        .missing-file::before {
+            content: "⚠️ ";
+            margin-right: 8px;
+        }
+
+        .color-palette {
+            display: flex;
+            gap: 20px;
+            margin-top: 20px;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: flex-start;
+        }
+
+        .color-swatch {
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            min-width: 120px;
+        }
+
+        .color-swatch .swatch {
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            margin-bottom: 10px;
+            border: 3px solid white;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        .color-swatch .primary {
+            background: #419A1C;
+        }
+
+        .color-swatch .dark {
+            background: #2d6a13;
+        }
+
+        .color-swatch .light {
+            background: #e8f5e8;
+        }
+
+        .guidelines {
+            background: #f8f9fa;
+            border-radius: 8px;
+            padding: 20px;
+            margin: 20px 0;
+        }
+
+        .guidelines ul {
+            list-style: none;
+            padding-left: 0;
+        }
+
+        .guidelines li {
+            padding: 8px 0;
+            border-bottom: 1px solid #e9ecef;
+        }
+
+        .guidelines li:last-child {
+            border-bottom: none;
+        }
+
+        .guidelines li::before {
+            content: "✓ ";
+            color: #419A1C;
+            font-weight: bold;
+            margin-right: 10px;
+        }
+
+        @media (max-width: 768px) {
+            .logo-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .header h1 {
+                font-size: 2rem;
+            }
+            
+            .container {
+                padding: 15px;
+            }
+        }
+
+        .maxh-80 img {
+            max-height: 80px;
+        }
+
+        .maxh-100 img {
+            max-height: 100px;
+        }
+
+        .maxh-120 img {
+            max-height: 120px;
+        }
+
+        a {
+            color: #419A1C;
+            text-decoration: none;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <div class="container">
+            <h1>台灣數位串流有限公司<br>
+                Taiwan Digital Streaming Co.</h1>
+            <p>Logo Usage Guidelines</p>
+        </div>
+    </div>
+
+    <div class="container">
+        <!-- Brand Colors Section -->
+        <div class="section">
+            <h2>Brand Colors</h2>
+            <div class="color-palette">
+                <div class="color-swatch">
+                    <div class="swatch primary"></div>
+                    <strong>Primary Green</strong>
+                    #419A1C
+                </div>
+                <div class="color-swatch">
+                    <div class="swatch dark"></div>
+                    <strong>Dark Green</strong>
+                    #2d6a13
+                </div>
+                <div class="color-swatch">
+                    <div class="swatch light"></div>
+                    <strong>Light Green</strong>
+                    #e8f5e8
+                </div>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2>Logo Colors / Sizes</h2>
+            <p>Our logo is available in multiple sizes and color variations to ensure optimal visibility across different backgrounds and applications.</p>
+            
+            <div class="logo-grid">
+                <div class="logo-item light-bg maxh-80">
+                    <img src="assets/twds_standard.svg" alt="TWDS Logo - Standard">
+                    <h4>Standard Logo</h4>
+                    <p>Primary logo for light backgrounds</p>
+                    <div class="size-info">
+                        <strong>File:</strong> twds_standard.svg<br>
+                        <strong>Aspect Ratio:</strong> 1:1<br>
+                        <strong>Format:</strong> Vector (SVG)
+                    </div>
+                </div>
+
+                <div class="logo-item light-bg maxh-80">
+                    <img src="assets/twds_black.svg" alt="TWDS Logo - Black">
+                    <h4>Black Logo</h4>
+                    <p>For high contrast applications</p>
+                    <div class="size-info">
+                        <strong>File:</strong> twds_black.svg<br>
+                        <strong>Aspect Ratio:</strong> 1:1<br>
+                        <strong>Format:</strong> Vector (SVG)
+                    </div>
+                </div>
+
+                <div class="logo-item dark-bg maxh-80">
+                    <img src="assets/twds_white.svg" alt="TWDS Logo - White">
+                    <h4>White Logo</h4>
+                    <p>For dark backgrounds</p>
+                    <div class="size-info">
+                        <strong>File:</strong> twds_white.svg<br>
+                        <strong>Aspect Ratio:</strong> 1:1<br>
+                        <strong>Format:</strong> Vector (SVG)
+                    </div>
+                </div>
+
+                <div class="logo-item light-bg maxh-80">
+                    <img src="assets/twds_cropped_standard.svg" alt="TWDS Logo - Cropped Standard">
+                    <h4>Cropped Standard Logo</h4>
+                    <p>Compact standard version for limited space</p>
+                    <div class="size-info">
+                        <strong>File:</strong> twds_cropped_standard.svg<br>
+                        <strong>Aspect Ratio:</strong> 1:1<br>
+                        <strong>Format:</strong> Vector (SVG)
+                    </div>
+                </div>
+
+                <div class="logo-item light-bg maxh-80">
+                    <img src="assets/twds_cropped_black.svg" alt="TWDS Logo - Cropped Black">
+                    <h4>Cropped Black Logo</h4>
+                    <p>Compact black version for high contrast</p>
+                    <div class="size-info">
+                        <strong>File:</strong> twds_cropped_black.svg<br>
+                        <strong>Aspect Ratio:</strong> 1:1<br>
+                        <strong>Format:</strong> Vector (SVG)
+                    </div>
+                </div>
+
+                <div class="logo-item gradient-bg maxh-80">
+                    <img src="assets/twds_cropped_white.svg" alt="TWDS Logo - Cropped White">
+                    <h4>Cropped White Logo</h4>
+                    <p>Compact version for limited space</p>
+                    <div class="size-info">
+                        <strong>File:</strong> twds_cropped_white.svg<br>
+                        <strong>Aspect Ratio:</strong> 1:1<br>
+                        <strong>Format:</strong> Vector (SVG)
+                    </div>
+                </div>
+                
+                <div class="logo-item light-bg maxh-80">
+                    <img src="assets/twds_text_standard.svg" alt="TWDS Logo - Text Standard">
+                    <h4>Text Standard Logo</h4>
+                    <p>Standard version with text</p>
+                    <div class="size-info">
+                        <strong>File:</strong> twds_text_standard.svg<br>
+                        <strong>Aspect Ratio:</strong> 3:1<br>
+                        <strong>Format:</strong> Vector (SVG)
+                    </div>
+                </div>
+
+                <div class="logo-item light-bg maxh-80">
+                    <img src="assets/twds_text_black.svg" alt="TWDS Logo - Text Black">
+                    <h4>Text Black Logo</h4>
+                    <p>Black version with text</p>
+                    <div class="size-info">
+                        <strong>File:</strong> twds_text_black.svg<br>
+                        <strong>Aspect Ratio:</strong> 3:1<br>
+                        <strong>Format:</strong> Vector (SVG)
+                    </div>
+                </div>
+
+                <div class="logo-item dark-bg maxh-80">
+                    <img src="assets/twds_text_white.svg" alt="TWDS Logo - Text White">
+                    <h4>Text White Logo</h4>
+                    <p>White version with text</p>
+                    <div class="size-info">
+                        <strong>File:</strong> twds_text_white.svg<br>
+                        <strong>Aspect Ratio:</strong> 3:1<br>
+                        <strong>Format:</strong> Vector (SVG)
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2>Applications</h2>
+            <p>Different logo backgrounds / types are available for various applications. Choose the appropriate size based on your usage context.</p>
+
+            <div class="logo-grid">
+                <div class="logo-item dark-bg maxh-120">
+                    <img src="assets/twds_circle.svg" alt="TWDS Logo - With Circle Background">
+                    <h4>With Circle Background</h4>
+                    <p>General web and digital use</p>
+                    <div class="size-info">
+                        <strong>File:</strong> twds_circle.svg<br>
+                        <strong>Format:</strong> Vector (SVG)<br>
+                        <strong>Aspect Ratio:</strong> 1:1<br>
+                        <strong>Use Case:</strong> Busy background, Favicons, Application Icons
+                    </div>
+                </div>
+                <div class="logo-item dark-bg maxh-120">
+                    <img src="assets/twds_text_withbg.svg" alt="TWDS Logo - With Text and Background">
+                    <h4>With Text and Background</h4>
+                    <p>General web and digital use</p>
+                    <div class="size-info">
+                        <strong>File:</strong> twds_text_withbg.svg<br>
+                        <strong>Format:</strong> Vector (SVG)<br>
+                        <strong>Aspect Ratio:</strong> 3:1<br>
+                        <strong>Use Case:</strong> Web, Digital
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2>Background Scenarios</h2>
+            <p>Choose the appropriate logo variation based on your background to ensure optimal visibility and brand consistency.</p>
+
+            <div class="logo-grid">
+                <div class="logo-item light-bg maxh-100">
+                    <img src="assets/twds_cropped_standard.svg" alt="TWDS Logo on Light Background">
+                    <h4>Light Background</h4>
+                    <p>Use standard logo on white, light gray, or pastel backgrounds</p>
+                </div>
+
+                <div class="logo-item dark-bg maxh-100">
+                    <img src="assets/twds_cropped_white.svg" alt="TWDS Logo on Dark Background">
+                    <h4>Dark Background</h4>
+                    <p>Use white logo on dark backgrounds for maximum contrast</p>
+                </div>
+
+                <div class="logo-item gradient-bg maxh-100">
+                    <img src="assets/twds_cropped_white.svg" alt="TWDS Logo on Brand Background">
+                    <h4>Brand Background</h4>
+                    <p>Use white logo on brand green backgrounds</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2>Usage Guidelines</h2>
+            <div class="guidelines">
+                <h3>Do</h3>
+                <ul>
+                    <li>Use the appropriate logo variation for your background</li>
+                    <li>Maintain the logo's aspect ratio when resizing</li>
+                    <li>Ensure adequate spacing around the logo (minimum 1x logo height)</li>
+                    <li>Use vector formats (SVG) for digital applications when possible</li>
+                </ul>
+
+                <h3>Do not</h3>
+                <ul>
+                    <li>Don't stretch or distort the logo</li>
+                    <li>Don't change the logo colors</li>
+                    <li>Don't place the logo on busy backgrounds</li>
+                    <li>Don't use low-resolution versions for print</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2>Download Assets</h2>
+            <p>All logo files are available in the assets folder. Contact the design team for additional formats or sizes.</p>
+            
+            <div class="size-info">
+                <strong>Available Files:</strong><br>
+                • <a href="assets/twds_standard.svg" download>twds_standard.svg</a> - Standard vector logo<br>
+                • <a href="assets/twds_white.svg" download>twds_white.svg</a> - White vector logo<br>
+                • <a href="assets/twds_black.svg" download>twds_black.svg</a> - Black vector logo<br>
+                • <a href="assets/twds_cropped_white.svg" download>twds_cropped_white.svg</a> - Compact white vector logo<br>
+                • <a href="assets/twds_cropped_standard.svg" download>twds_cropped_standard.svg</a> - Compact standard vector logo<br>
+                • <a href="assets/twds_cropped_black.svg" download>twds_cropped_black.svg</a> - Compact black vector logo<br>
+                • <a href="assets/twds_text_standard.svg" download>twds_text_standard.svg</a> - Text standard vector logo<br>
+                • <a href="assets/twds_text_white.svg" download>twds_text_white.svg</a> - Text white vector logo<br>
+                • <a href="assets/twds_text_black.svg" download>twds_text_black.svg</a> - Text black vector logo<br>
+                • <a href="assets/twds_text_withbg.svg" download>twds_text_withbg.svg</a> - Text with background vector logo<br>
+                • <a href="assets/twds_circle.svg" download>twds_circle.svg</a> - With Circle Background
+            </div>
+        </div>
+    </div>
+</body>
+</html> 
